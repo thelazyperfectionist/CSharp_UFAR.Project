@@ -1,0 +1,48 @@
+﻿@page "/Dashboard"
+@using EmployeeManagmentSystem.Data
+@inject EmployeeService employeeService
+@inject DepartmentService departmentService
+
+<h2 class="text-center mb-4">Dashboard</h2>
+<hr />
+
+<div class="row">
+    <div class="col-lg-4">
+        <div class="card bg-info text-white mb-4">
+            <div class="card-header">Total Employees</div>
+            <div class="card-body">
+                <h3 class="card-title">@TotalEmployees</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card bg-success text-white mb-4">
+            <div class="card-header">Total Departments</div>
+            <div class="card-body">
+                <h3 class="card-title">@TotalDepartments</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card bg-warning text-white mb-4">
+            <div class="card-header">Average Salary</div>
+            <div class="card-body">
+                <h3 class="card-title">$@AverageSalary</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    int TotalEmployees { get; set; }
+    int TotalDepartments { get; set; }
+    decimal AverageSalary { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        TotalEmployees = (await employeeService.GetAllEmployeesAsync()).Count;
+        TotalDepartments = (await departmentService.GetAllDepartmentsAsync()).Count;
+        AverageSalary = await employeeService.GetAverageSalaryAsync();
+    }
+}
+

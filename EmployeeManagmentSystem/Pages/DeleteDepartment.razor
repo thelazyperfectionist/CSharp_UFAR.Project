@@ -1,0 +1,64 @@
+﻿@page "/DeleteDepartment/{id}"
+@using EmployeeManagmentSystem.Data
+@inject DepartmentService departmentService
+@inject NavigationManager NavigationManager
+@inject IToastService toastService
+
+
+<h2>Edit Department</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+
+<form>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label>Department Id: </label>
+                <label>@obj.Id</label>
+            </div>
+            <div class="form-group">
+                <label>Department Name: </label>
+                <label>@obj.DepartmentName</label>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-danger" @onclick="@DeleteDepartments" value="Delete" />
+                <input type="button" class="btn btn-danger" @onclick="Cancel" value="Cancel" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    Department obj = new Department();
+
+    protected override async Task OnInitializedAsync()
+    {
+        obj = await departmentService.GetDepartmentAsync(Convert.ToInt32(Id));
+    }
+
+    protected async Task DeleteDepartments()
+    {
+        try
+        {
+            await departmentService.DeleteDepartmentAsync(obj);
+            toastService.ShowSuccess("Department Deleted");
+            NavigationManager.NavigateTo("Departments");
+        }
+        catch (Exception ex)
+        {
+            toastService.ShowError($"Error deleting department: {ex.Message}");
+        }
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Departments");
+    }
+}

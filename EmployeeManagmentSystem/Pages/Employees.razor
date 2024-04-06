@@ -1,0 +1,151 @@
+﻿@page "/Employees"
+@using EmployeeManagmentSystem.Data
+@inject EmployeeService employeeService
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        margin-top: 20px;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        margin-bottom: 10px;
+    }
+
+    .card-header {
+        background-color: #007bff;
+        border-bottom: none;
+        border-radius: 10px 10px 0 0;
+    }
+
+        .card-header a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .table {
+        background-color: #fff;
+    }
+
+        .table th,
+        .table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        .table th {
+            background-color: #f0f0f0;
+        }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .btn {
+        border-radius: 5px;
+    }
+
+    .btn-success {
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+    }
+
+    .btn-danger {
+        background-color: #d9534f;
+        border-color: #d43f3a;
+    }
+
+    .oi {
+        margin-right: 5px;
+    }
+</style>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="background-color: #5bc0de;">
+            <!-- Updated color -->
+            <div class="nav-link">
+                <NavLink href="AddEmployee">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Add New Employee
+                </NavLink>
+            </div>
+        </div>
+        <div class="card-body">
+            <h1 class="text-center">Employee List</h1>
+
+            @if (EmpObj is null)
+            {
+                <p class="text-center"><em>Loading...</em></p>
+            }
+            else if (EmpObj.Count == 0)
+            {
+                <p class="text-center"><em>No employees found!</em></p>
+            }
+            else
+            {
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Id</th>
+                            <th>Employee Name</th>
+                            <th>Gender</th>
+                            <th>City</th>
+                            <th>Department</th>
+                            <th>Job Title</th>
+                            <th>Email</th>
+                            <th>Salary</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var emp in EmpObj)
+                        {
+                            <tr>
+                                <td>@emp.Id</td>
+                                <td>@emp.EmployeeName</td>
+                                <td>@emp.Gender</td>
+                                <td>@emp.City</td>
+                                <td>@emp.DepartmentName</td>
+                                <td>@emp.JobTitle</td>
+                                <td>@emp.Email</td>
+                                <td>@emp.Salary</td>
+                                <td>
+                                    <NavLink class="btn btn-success" href="@($"EditEmployee/{emp.Id}")">
+                                        <span class="oi oi-pencil" aria-hidden="true"></span> Edit
+                                    </NavLink>
+                                    <NavLink class="btn btn-danger" href="@($"DeleteEmployee/{emp.Id}")">
+                                        <span class="oi oi-trash" aria-hidden="true"></span> Delete
+                                    </NavLink>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        </div>
+    </div>
+</div>
+
+@code {
+    List<Employee> EmpObj { get; set; } = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        EmpObj = await employeeService.GetAllEmployeesAsync();
+    }
+}

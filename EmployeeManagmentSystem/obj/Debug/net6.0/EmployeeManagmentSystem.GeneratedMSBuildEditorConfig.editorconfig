@@ -1,0 +1,95 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EmployeeManagmentSystem
+build_property.RootNamespace = EmployeeManagmentSystem
+build_property.ProjectDir = C:\Users\anita\source\repos\EmployeeManagmentSystem\EmployeeManagmentSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\anita\source\repos\EmployeeManagmentSystem\EmployeeManagmentSystem
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/AddDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRGVwYXJ0bWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/AddEmployees.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRkRW1wbG95ZWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/DeleteDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlRGVwYXJ0bWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/DeleteEmployees.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlRW1wbG95ZWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/Departments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVwYXJ0bWVudHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/EditDepartment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdERlcGFydG1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/EditEmployees.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEVtcGxveWVlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/Employees.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRW1wbG95ZWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-ee88sr7tm7
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-d0ky269pkx
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/anita/source/repos/EmployeeManagmentSystem/EmployeeManagmentSystem/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

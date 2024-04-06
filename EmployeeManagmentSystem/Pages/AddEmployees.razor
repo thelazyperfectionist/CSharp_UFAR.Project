@@ -1,0 +1,96 @@
+﻿@page "/AddEmployee"
+@using EmployeeManagmentSystem.Data
+@inject EmployeeService employeeService
+@inject DepartmentService departmentService
+@inject NavigationManager NavigationManager
+@inject IToastService toastService
+
+<h2 class="text-center">Add Employee</h2>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form>
+                <div class="form-group">
+                    <label for="employeeName">Employee Name</label>
+                    <input id="employeeName" class="form-control" @bind="employee.EmployeeName" />
+                </div>
+                <div class="form-group">
+                    <label for="employeeSurname">Employee Surname</label>
+                    <input id="employeeSurname" class="form-control" @bind="employee.EmployeeSurname" />
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" class="form-control" @bind="employee.Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input id="city" class="form-control" @bind="employee.City" />
+                </div>
+                <div class="form-group">
+                    <label for="departmentName">Department Name</label>
+                    @if (DepObj != null)
+                    {
+                        <select id="departmentName" class="form-control" @bind="employee.DepartmentName">
+                            @foreach (var dep in DepObj)
+                            {
+                                <option value="@dep.DepartmentName">@dep.DepartmentName</option>
+                            }
+                        </select>
+                    }
+                    else
+                    {
+                        <input id="departmentName" class="form-control" @bind="employee.DepartmentName" />
+                    }
+                </div>
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input id="jobTitle" class="form-control" @bind="employee.JobTitle" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" class="form-control" @bind="employee.Email" />
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input id="salary" class="form-control" @bind="employee.Salary" />
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary btn-block" @onclick="CreateEmployee">Save</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-secondary btn-block" @onclick="Cancel">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@code {
+    Employee employee = new Employee();
+    List<Department> DepObj = new List<Department>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        DepObj = await departmentService.GetAllDepartmentsAsync();
+    }
+
+    protected async Task CreateEmployee()
+    {
+        await employeeService.InsertEmployeeAsync(employee);
+        toastService.ShowSuccess("Employee Added");
+        NavigationManager.NavigateTo("/Employees");
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("/Employees");
+    }
+}
+

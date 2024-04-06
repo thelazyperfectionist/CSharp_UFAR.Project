@@ -1,0 +1,52 @@
+﻿@page "/AddDepartment"
+@using EmployeeManagmentSystem.Data
+@inject DepartmentService departmentService
+@inject NavigationManager NavigationManager
+@inject IToastService toastService
+
+<h2>Add Department</h2>
+<hr />
+
+<form>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="departmentName" class="control-label">Department Name</label>
+                <input id="departmentName" class="form-control" @bind="obj.DepartmentName" />
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" @onclick="CreateDepartment">Save</button>
+                <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+    Department obj = new Department();
+
+    protected async Task CreateDepartment()
+    {
+        try
+        {
+            await departmentService.InsertDepartmentAsync(obj);
+            toastService.ShowSuccess("Department Added");
+            NavigationManager.NavigateTo("Departments");
+        }
+        catch (Exception ex)
+        {
+            toastService.ShowError("Failed to add department. Please try again.");
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    void Cancel()
+    {
+        NavigationManager.NavigateTo("Departments");
+    }
+}
+
