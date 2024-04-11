@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2H6xKqcgKX8Pckk8fffPGaehggCcHNFZIHzvf+4ZJB8gtBpE7aC0KE5vEO9uXb9GggjrsuhP1oqU8XLoN60ffQ==",
+  "dgSpecHash": "MPJaEMjaAqd52r3qpXTKjjuovG4mwqFgdyqWpwIyVqmy+LXcTLbsv0BPPEnDMMgLG/+Yi84KXfKwoYLp3+iWgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\anita\\source\\repos\\EmployeeManagmentSystem\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj",
+  "projectFilePath": "C:\\Users\\anita\\source\\repos\\CSharp_UFAR.Project\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anita\\.nuget\\packages\\blazored.toast\\4.2.0\\blazored.toast.4.2.0.nupkg.sha512",
     "C:\\Users\\anita\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

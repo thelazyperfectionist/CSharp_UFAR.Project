@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anita\\source\\repos\\EmployeeManagmentSystem\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj": {}
+    "C:\\Users\\anita\\source\\repos\\CSharp_UFAR.Project\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anita\\source\\repos\\EmployeeManagmentSystem\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj": {
+    "C:\\Users\\anita\\source\\repos\\CSharp_UFAR.Project\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anita\\source\\repos\\EmployeeManagmentSystem\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj",
+        "projectUniqueName": "C:\\Users\\anita\\source\\repos\\CSharp_UFAR.Project\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj",
         "projectName": "EmployeeManagmentSystem",
-        "projectPath": "C:\\Users\\anita\\source\\repos\\EmployeeManagmentSystem\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj",
+        "projectPath": "C:\\Users\\anita\\source\\repos\\CSharp_UFAR.Project\\EmployeeManagmentSystem\\EmployeeManagmentSystem.csproj",
         "packagesPath": "C:\\Users\\anita\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anita\\source\\repos\\EmployeeManagmentSystem\\EmployeeManagmentSystem\\obj\\",
+        "outputPath": "C:\\Users\\anita\\source\\repos\\CSharp_UFAR.Project\\EmployeeManagmentSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
